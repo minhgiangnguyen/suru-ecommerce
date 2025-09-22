@@ -18,13 +18,13 @@ export default function WritingReviewPage(){
 
   return (
     <AdminLayout>
-      <h2>Write Review</h2>
+      <h2>Viết đánh giá</h2>
       <form onSubmit={submit} style={{ display: 'grid', gap: 8, maxWidth: 480 }}>
-        <input type="number" value={productId} onChange={(e)=>setProductId(Number(e.target.value))} placeholder="Product ID" />
-        <input value={authorName} onChange={(e)=>setAuthorName(e.target.value)} placeholder="Author" />
-        <textarea value={comment} onChange={(e)=>setComment(e.target.value)} placeholder="Comment" />
-        <input type="number" value={rating} onChange={(e)=>setRating(Number(e.target.value))} placeholder="Rating (1-5)" />
-        <button type="submit">Submit</button>
+        <input type="number" value={productId} onChange={(e)=>setProductId(Number(e.target.value))} placeholder="ID sản phẩm" />
+        <input value={authorName} onChange={(e)=>setAuthorName(e.target.value)} placeholder="Tác giả" />
+        <textarea value={comment} onChange={(e)=>setComment(e.target.value)} placeholder="Nội dung" />
+        <input type="number" value={rating} onChange={(e)=>setRating(Number(e.target.value))} placeholder="Đánh giá (1-5)" />
+        <button type="submit">Gửi</button>
         {msg && <div>{msg}</div>}
       </form>
     </AdminLayout>

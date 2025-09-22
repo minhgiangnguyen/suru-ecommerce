@@ -33,15 +33,15 @@ export const ProductForm: React.FC<{ initial?: Partial<ProductInput>; onSubmit: 
 
   return (
     <form onSubmit={submit} style={{ display: 'grid', gap: 10, maxWidth: 600 }}>
-      <input placeholder="Name" value={form.name} onChange={(e)=>change('name', e.target.value)} required />
-      <input placeholder="Favicon URL" value={form.favicon} onChange={(e)=>change('favicon', e.target.value)} />
+      <input placeholder="Tên sản phẩm" value={form.name} onChange={(e)=>change('name', e.target.value)} required />
+      <input placeholder="URL Favicon" value={form.favicon} onChange={(e)=>change('favicon', e.target.value)} />
       <input type="color" value={form.topbarColor} onChange={(e)=>change('topbarColor', e.target.value)} />
-      <textarea placeholder="Description" value={form.description} onChange={(e)=>change('description', e.target.value)} />
-      <input placeholder="Category" value={form.category} onChange={(e)=>change('category', e.target.value)} />
-      <input type="number" placeholder="Price" value={form.price} onChange={(e)=>change('price', Number(e.target.value))} />
-      <input type="number" placeholder="Sale %" value={form.salePercent} onChange={(e)=>change('salePercent', Number(e.target.value))} />
-      <input placeholder="Product URL" value={form.urlProduct} onChange={(e)=>change('urlProduct', e.target.value)} />
-      <button type="submit" disabled={loading}>{loading ? 'Saving...' : 'Save'}</button>
+      <textarea placeholder="Mô tả" value={form.description} onChange={(e)=>change('description', e.target.value)} />
+      <input placeholder="Danh mục" value={form.category} onChange={(e)=>change('category', e.target.value)} />
+      <input type="number" placeholder="Giá" value={form.price} onChange={(e)=>change('price', Number(e.target.value))} />
+      <input type="number" placeholder="Giảm giá %" value={form.salePercent} onChange={(e)=>change('salePercent', Number(e.target.value))} />
+      <input placeholder="URL sản phẩm" value={form.urlProduct} onChange={(e)=>change('urlProduct', e.target.value)} />
+      <button type="submit" disabled={loading}>{loading ? 'Đang lưu...' : 'Lưu'}</button>
     </form>
   );
 }

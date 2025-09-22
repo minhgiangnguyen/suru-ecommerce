@@ -17,14 +17,14 @@ export const OrdersTable: React.FC<{ orders: Order[]; onUpdate: (id: number, dat
       <thead>
         <tr>
           <th>ID</th>
-          <th>Customer</th>
-          <th>Product</th>
-          <th>Label</th>
-          <th>Total</th>
-          <th>Receive</th>
-          <th>Transfer</th>
-          <th>Created</th>
-          <th>Actions</th>
+          <th>Khách hàng</th>
+          <th>Sản phẩm</th>
+          <th>Nhãn</th>
+          <th>Tổng</th>
+          <th>Nhận hàng</th>
+          <th>Chuyển</th>
+          <th>Tạo lúc</th>
+          <th>Hành động</th>
         </tr>
       </thead>
       <tbody>
@@ -39,8 +39,8 @@ export const OrdersTable: React.FC<{ orders: Order[]; onUpdate: (id: number, dat
             <td>{o.transferStatus}</td>
             <td>{new Date(o.createdAt).toLocaleString()}</td>
             <td>
-              <button onClick={()=>onUpdate(o.id, { receiveStatus: 'received' })}>Mark Received</button>
-              <button onClick={()=>onUpdate(o.id, { transferStatus: 'transferred' })} style={{ marginLeft: 8 }}>Mark Transferred</button>
+              <button onClick={()=>onUpdate(o.id, { receiveStatus: 'received' })}>Đánh dấu đã nhận</button>
+              <button onClick={()=>onUpdate(o.id, { transferStatus: 'transferred' })} style={{ marginLeft: 8 }}>Đánh dấu đã chuyển</button>
             </td>
           </tr>
         ))}

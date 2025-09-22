@@ -16,18 +16,18 @@ export default function LoginPage(){
       localStorage.setItem('token', res.data.accessToken);
       router.push('/dashboard');
     } catch (e:any) {
-      setError(e?.response?.data?.message || 'Login failed');
+      setError(e?.response?.data?.message || 'Đăng nhập thất bại');
     }
   };
 
   return (
     <div style={{ display: 'grid', placeItems: 'center', height: '100vh' }}>
       <form onSubmit={submit} style={{ display: 'grid', gap: 12, width: 320 }}>
-        <h2>Admin Login</h2>
+        <h2>Đăng nhập Quản trị</h2>
         {error ? <div style={{ color: 'red' }}>{error}</div> : null}
-        <input placeholder="Username" value={username} onChange={(e)=>setUsername(e.target.value)} />
-        <input placeholder="Password" type="password" value={password} onChange={(e)=>setPassword(e.target.value)} />
-        <button type="submit">Login</button>
+        <input placeholder="Tên đăng nhập" value={username} onChange={(e)=>setUsername(e.target.value)} />
+        <input placeholder="Mật khẩu" type="password" value={password} onChange={(e)=>setPassword(e.target.value)} />
+        <button type="submit">Đăng nhập</button>
       </form>
     </div>
   );

@@ -33,11 +33,11 @@ export default function ProductPage({ product, images, features, labels, reviews
         <ProductGallery images={images} />
         <ProductDetail name={product.name} description={product.description} category={product.category} price={product.price} salePercent={product.salePercent} />
         <section>
-          <h3>Order</h3>
+          <h3>Đặt hàng</h3>
           <OrderForm productId={product.id} labels={labels} defaultPrice={product.price} />
         </section>
         <section>
-          <h3>Features</h3>
+          <h3>Tính năng</h3>
           <ul>
             {features.map((f) => (
               <li key={f.id}>{f.content}</li>
@@ -45,7 +45,7 @@ export default function ProductPage({ product, images, features, labels, reviews
           </ul>
         </section>
         <section>
-          <h3>Reviews</h3>
+          <h3>Đánh giá</h3>
           <ReviewList reviews={reviews} />
         </section>
       </div>

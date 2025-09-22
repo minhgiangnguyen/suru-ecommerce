@@ -7,10 +7,10 @@ export const AdminLayout: React.FC<{ children: React.ReactNode }>=({ children })
       <aside style={{ borderRight: '1px solid #eee', padding: 16 }}>
         <h3>Suzu Admin</h3>
         <nav style={{ display: 'grid', gap: 8 }}>
-          <Link href="/dashboard">Dashboard</Link>
-          <Link href="/products">Products</Link>
-          <Link href="/orders">Orders</Link>
-          <Link href="/reviews/write">Write Review</Link>
+          <Link href="/dashboard">Bảng điều khiển</Link>
+          <Link href="/products">Sản phẩm</Link>
+          <Link href="/orders">Đơn hàng</Link>
+          <Link href="/reviews/write">Viết đánh giá</Link>
         </nav>
       </aside>
       <main style={{ padding: 24 }}>{children}</main>

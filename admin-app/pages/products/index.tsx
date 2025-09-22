@@ -22,7 +22,7 @@ export default function ProductsPage(){
 
   return (
     <AdminLayout>
-      <h2>Products</h2>
+      <h2>Sản phẩm</h2>
       <ProductForm onSubmit={create} />
       <ul>
         {products.map(p=> <li key={p.id}>{p.name}</li>)}
