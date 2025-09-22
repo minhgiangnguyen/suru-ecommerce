@@ -19,7 +19,7 @@ export default function OrdersPage(){
 
   return (
     <AdminLayout>
-      <h2>Orders</h2>
+      <h2>Đơn hàng</h2>
       <OrdersTable orders={orders} onUpdate={update} />
     </AdminLayout>
   );

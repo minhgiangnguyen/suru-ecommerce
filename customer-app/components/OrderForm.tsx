@@ -31,26 +31,26 @@ export const OrderForm: React.FC<{ productId: number; labels: Label[]; onCreated
   return (
     <form onSubmit={submit} style={{ display: 'grid', gap: 10 }}>
       <label>
-        <div>Name</div>
+        <div>Họ và tên</div>
         <input value={name} onChange={(e) => setName(e.target.value)} required />
       </label>
       <label>
-        <div>Phone</div>
+        <div>Số điện thoại</div>
         <input value={phone} onChange={(e) => setPhone(e.target.value)} required />
       </label>
       <label>
-        <div>Address</div>
+        <div>Địa chỉ</div>
         <input value={address} onChange={(e) => setAddress(e.target.value)} required />
       </label>
       <label>
-        <div>Quantity</div>
+        <div>Số lượng</div>
         <select value={quantityLabelId} onChange={(e) => setQuantityLabelId(Number(e.target.value))}>
           {labels.map((l) => (
             <option key={l.id} value={l.id}>{l.labelText}</option>
           ))}
         </select>
       </label>
-      <button type="submit" disabled={loading}>{loading ? 'Submitting...' : 'Submit Order'}</button>
+      <button type="submit" disabled={loading}>{loading ? 'Đang gửi...' : 'Đặt hàng'}</button>
     </form>
   );
 };

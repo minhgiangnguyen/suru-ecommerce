@@ -3,7 +3,7 @@ import React from 'react';
 type Review = { id: number; authorName: string; rating?: number; comment: string; createdAt: string };
 
 export const ReviewList: React.FC<{ reviews: Review[] }> = ({ reviews }) => {
-  if (!reviews?.length) return <div>No reviews yet.</div>;
+  if (!reviews?.length) return <div>Chưa có đánh giá.</div>;
   return (
     <div style={{ display: 'grid', gap: 12 }}>
       {reviews.map((r) => (
