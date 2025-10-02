@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "@nestjs/config": "^4.0.2",
+    "@nestjs/platform-express": "^11.1.6",
+    "@emotion/react": "^11.11.0",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.0",
+    "@mui/material": "^5.14.0",
+    "axios": "^1.4.0",
+    "formik": "^2.4.2",
+    "next": "13.5.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "yup": "^1.2.0"
+  },
+  "devDependencies": {
+    "prisma": "^6.16.2"
+  }
+}

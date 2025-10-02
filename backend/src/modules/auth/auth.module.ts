@@ -11,7 +11,7 @@ import { JwtStrategy } from './jwt.strategy';
     PassportModule,
     JwtModule.registerAsync({
       useFactory: () => ({
-        secret: process.env.JWT_SECRET || 'changeme',
+        secret: process.env.JWT_SECRET,
         signOptions: { expiresIn: '7d' },
       }),
     }),

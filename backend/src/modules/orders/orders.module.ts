@@ -5,7 +5,7 @@ import { PrismaService } from '../../services/prisma.service';
 import { JwtModule } from '@nestjs/jwt';
 
 @Module({
-  imports: [JwtModule.register({ secret: process.env.JWT_SECRET || 'changeme' })],
+  imports: [JwtModule.register({ secret: process.env.JWT_SECRET })],
   controllers: [OrdersController],
   providers: [OrdersService, PrismaService],
 })

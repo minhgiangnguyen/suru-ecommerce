@@ -43,21 +43,8 @@ async function main() {
     ],
   });
 
-  await prisma.productFeature.createMany({
-    data: [
-      { productId: product1.id, content: 'Dishwasher safe', position: 'detail' },
-      { productId: product1.id, content: 'Microwave safe', position: 'detail' },
-      { productId: product2.id, content: 'Scratch resistant', position: 'detail' },
-    ],
-  });
-
-  await prisma.quantityLabel.createMany({
-    data: [
-      { productId: product1.id, labelText: '1 product - $20 - Free ship' },
-      { productId: product1.id, labelText: '2 products - $36 - Free ship' },
-      { productId: product2.id, labelText: '1 product - $15 - Free ship' },
-    ],
-  });
+  // Features are now stored as JSON in Product model
+  // Quantity labels removed as they're not in current schema
 
   await prisma.review.createMany({
     data: [
