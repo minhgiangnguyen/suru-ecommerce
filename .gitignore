@@ -8,6 +8,8 @@ dist/
 *.env
 backend/.env
 backend/prisma/.env
+backend/prisma/.en
+
 
 
 # Logs
@@ -19,3 +21,6 @@ yarn-error.log*
 # OS
 .DS_Store
 Thumbs.db
+
+Document/
+
