@@ -8,7 +8,8 @@
     "start:dev": "ts-node-dev --respawn --transpile-only src/main.ts",
     "start:debug": "node --inspect-brk -r ts-node/register src/main.ts",
     "prisma:generate": "prisma generate",
-    "prisma:migrate": "prisma migrate dev --name init",
+    "migrate:dev": "prisma migrate dev --name init",
+    "migrate:prod": "prisma migrate deploy",
     "prisma:seed": "ts-node prisma/seed.ts"
   },
   "dependencies": {
