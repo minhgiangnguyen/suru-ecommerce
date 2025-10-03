@@ -1,7 +1,13 @@
 # Node
 node_modules/
 dist/
+.vscode/
 backend/node_modules/
+customer-app/node_modules/
+admin-app/node_modules/
+customer-app/.next
+admin-app/.next
+
 
 
 # Environment
@@ -11,6 +17,8 @@ backend/node_modules/
 backend/.env
 backend/prisma/.env
 backend/prisma/.en
+customer-app/.env.local
+admin-app/.env.local
 
 
 
