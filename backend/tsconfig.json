@@ -14,6 +14,8 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": ["src/**/*", "prisma/**/*"]
+"include": ["src/**/*", "prisma/**/*", "src/types/**/*"],
+"exclude": ["node_modules", "dist"]
+
 }
 
