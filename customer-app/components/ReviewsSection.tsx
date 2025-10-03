@@ -6,8 +6,6 @@ import {
 } from "@mui/material";
 import { Reply, Edit, Delete } from "@mui/icons-material";
 import api from "../services/api";
-import ReplyFormModal from "./ReplyFormModal";
-import ReviewFormModal from "./ReviewFormModal";
 
 interface Review {
   id: number;
@@ -143,23 +141,6 @@ export default function ReviewsSection({ productId }: { productId: number }) {
           ))}
         </List>
       )}
-
-      <ReplyFormModal
-        open={replyOpen}
-        onClose={() => setReplyOpen(false)}
-        mode={replyMode}
-        review={targetReview}
-        editReply={editReply}
-        onSaved={handleReplySaved}
-        adminInfo={currentAdmin}
-      />
-
-      <ReviewFormModal
-        open={reviewFormOpen}
-        onClose={() => setReviewFormOpen(false)}
-        productId={productId}
-        onSaved={() => { setReviewFormOpen(false); load(); }}
-      />
 
       <Snackbar open={snackbar.open} autoHideDuration={3000} onClose={()=>setSnackbar({...snackbar, open:false})} anchorOrigin={{vertical:"bottom", horizontal:"right"}}>
         <Alert onClose={()=>setSnackbar({...snackbar, open:false})} severity={snackbar.severity}>{snackbar.message}</Alert>
