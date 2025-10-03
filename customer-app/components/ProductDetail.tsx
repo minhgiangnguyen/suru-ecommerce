@@ -6,8 +6,8 @@ export const ProductDetail: React.FC<{
   price: number;
   salePercent: number;
   salePrice: number;
-  viewCount: number;
-}> = ({ name, details, price, salePercent, viewCount, salePrice }) => {
+  buyCount: number;
+}> = ({ name, details, price, salePercent, buyCount, salePrice }) => {
   // const salePrice = salePercent ? price * (1 - salePercent / 100) : price;
   // Hàm scroll đến section
   const scrollTo = (id: string) => {
@@ -43,7 +43,7 @@ export const ProductDetail: React.FC<{
       <div className="flex items-center gap-2 text-lg">
         <span className="text-yellow-500">4.9 ★ ★ ★ ★ ★</span>
         <span className="text-blue-600 text-sm font-semibold underline cursor-pointer">
-          {viewCount?.toLocaleString("vi-VN") || "0"} lượt mua
+          {buyCount?.toLocaleString("vi-VN") || "0"} lượt mua
         </span>
       </div>
 

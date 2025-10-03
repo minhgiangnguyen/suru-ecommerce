@@ -27,7 +27,7 @@ export type Product = {
   formImage?: string;
   details: string; //phần thông tin chi tiết
   purchaseOptions: { totalPrice: number; option: string }[];
-  viewCount: number | 0; //Lượt xem
+  buyCount: number | 0; //Lượt mua
   seoTitle: string;
   features: { items: string[]; note: string; title: string };
   reviewCount?: number;
@@ -89,7 +89,7 @@ export default function ProductPage({ product, images, reviews }: Props) {
               details={product.details}
               price={product.price}
               salePercent={product.salePercent}
-              viewCount={product.viewCount}
+              buyCount={product.buyCount}
               salePrice={product.salePrice}
             />
           </section>
