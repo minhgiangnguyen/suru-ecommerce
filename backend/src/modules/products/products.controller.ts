@@ -115,12 +115,12 @@ export class ProductsController {
   ) {
     const posArr: string[] = JSON.parse(positions || "[]");
     const uploaded = await Promise.all(
-      files.map((file, idx) =>
+      files.map((file: Express.Multer.File, idx: number) =>
         this.cloudinaryService.uploadImage(file, "products/images")
       )
     );
     await Promise.all(
-      uploaded.map((res, idx) =>
+      uploaded.map((res: { secure_url: string }, idx: number) =>
         this.productsService.addImage(Number(id), {
           imageUrl: res.secure_url,
           position: posArr[idx],
